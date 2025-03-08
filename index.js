@@ -74,7 +74,7 @@ app.get("/", (req, res) => {
 
 app.post("/test", async (req, res) => {
   const toNumber = req.body.to;
-    // return console.log(toNumber);
+  // return console.log(toNumber);
   // res.send({message:"test"})
 
   client.calls
