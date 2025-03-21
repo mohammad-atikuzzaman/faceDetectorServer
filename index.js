@@ -17,7 +17,8 @@ const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
 const client = new twilio(accountSid, authToken);
 
 app.post("/demo", async(req,res)=>{
-  console.log("api called");
+  const nm= req.body.phone
+  console.log(nm)
   res.send({message:"hello world"})
 })
 
@@ -26,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/call-owner", async (req, res) => {
-  const toNumber = req.body.to;
+  const toNumber = req.body.phone;
   // return console.log(toNumber);
   // res.send({message:"test"})
 
